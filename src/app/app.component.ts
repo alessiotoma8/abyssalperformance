@@ -1,7 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { ThemeService } from './Common/services/theme.service';
-import * as firebase from 'firebase/app'
-import { getAnalytics, logEvent } from "firebase/analytics";
+import { FirebaseAnalyticsService } from '../app/Common/services/firebase.service';
 
 @Component({
   selector: 'my-app',
@@ -11,7 +10,8 @@ import { getAnalytics, logEvent } from "firebase/analytics";
 export class AppComponent implements AfterViewInit {
   darkThemeEnabled: boolean;
 
-  constructor(private themeService: ThemeService) {
+  constructor(private firebaseAnalyticsService: FirebaseAnalyticsService,private themeService: ThemeService) {
+    this.firebaseAnalyticsService.initializeAnalytics();
     this.darkThemeEnabled = themeService.darkThemeEnabled;
     const prefersDark = window.matchMedia(
       '(prefers-color-scheme: dark)'
@@ -24,6 +24,6 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-   
+    
   }
 }
