@@ -1,9 +1,12 @@
+
+
 <div>
   <nav class="navbar navbar-dark">
+    <div class="container-fluid">
     <button
       class="navbar-toggler p-0 border-0 openbtn"
       type="button"
-      data-toggle="offcanvas"
+      data-bs-toggle="offcanvas"
       (click)="openNav()"
     >
       <span class="navbar-toggler-icon"></span>
@@ -11,7 +14,10 @@
     <a class="titlenav">Abyssal Performance</a>
 
     <img src="https://svgshare.com/i/11Kh.svg" style="width:60px" title="" />
+  </div>
   </nav>
+
+  
   <div id="mySidepanel" class="sidepanel">
     <a class="closebtn category" (click)="closeNav()">&times;</a>
     <a
