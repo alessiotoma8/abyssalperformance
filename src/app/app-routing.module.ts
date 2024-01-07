@@ -2,9 +2,26 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
+import { AboutUsComponent } from './about/about-us.component';
+import { ProductDetail } from './products/productdetail/productdetail.component';
+import { FilterProducts } from './products/filter/filter.component';
+import { ProductionComponent } from './production/production.component';
+import { CustomComponent } from './custom/custom.component';
 
 const routes: Routes = [
- 
+  { path: 'aboutus', component: AboutUsComponent },
+  {
+    path: 'products',
+    component: ProductsComponent,
+    children: [
+      { path: '', component: FilterProducts },
+      { path: ':id', component: ProductDetail },
+    ],
+  },
+  { path: '', component: HomeComponent },
+  { path: 'production', component: ProductionComponent },
+  { path: 'custom', component: CustomComponent },
 ];
 
 @NgModule({

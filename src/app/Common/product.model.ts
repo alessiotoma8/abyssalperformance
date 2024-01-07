@@ -9,12 +9,19 @@ export class Product {
   price: number;
   category: Category;
 
-  constructor(id: number, productName: string, imageUrls: URL[], price: number, category: Category, description?: string) {
+  constructor(
+    id: number,
+    productName: String,
+    imageUrls: URL[],
+    price: number,
+    category: Category,
+    description?: String
+  ){
     this.id = id;
-    this.productName = productName;
+    this.productName =productName;
     this.imageUrls = imageUrls;
+    this.description = description;
     this.price = price;
     this.category = category;
-    this.description = description;
   }
 }

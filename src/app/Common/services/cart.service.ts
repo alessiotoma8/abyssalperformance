@@ -7,9 +7,9 @@ import { Product } from '../../Common/product.model';
   providedIn: 'root',
 })
 export class CartService {
-  selectedProduct: Product | null = null;
-  selectedFiniture: Finiture| null = null;
-  seletedModel: Model | null = null;
+  selectedProduct: Product|null = null;
+  selectedFiniture: Finiture|null = null;
+  seletedModel: Model|null = null;
 
   addToCart(
     product: Product,

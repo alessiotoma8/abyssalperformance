@@ -1,0 +1,88 @@
+.sidepanel {
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1050; /* Stay on top */
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #474747;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 40px; /* Place content 60px from the top */
+  padding-bottom: 40px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+.navbar {
+  background-color: #9f87af;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 26px;
+  cursor: pointer;
+  background-color: #66000000;
+  color: white;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+.titlenav {
+  color: white;
+}
+
+.selected {
+  background-color: lightblue; /* Add your selected styles here */
+}
+
+.sidepanel a {
+  user-select: none;
+  animation: fadeIn 1s;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.subcategory3 {
+  padding-left: 16px;
+  font-size: 16px;
+}
+
+.subcategory2 {
+  padding-left: 16px;
+  font-size: 16px;
+}
+.subcategory {
+  padding-left: 48px;
+  font-size: 20px;
+}
+.category {
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -6,9 +6,9 @@ import categories from '../../../assets/categories.json';
 @Injectable()
 export class CategoriesService {
   categoriesData: any;
-  selectedModelFromMenu: String | undefined;
-  selectedBrandFromMenu: String | undefined;
-  selectedCategoryFromMenu: VehicleType | undefined;
+  selectedModelFromMenu: String|null = null;
+  selectedBrandFromMenu: String|null = null;
+  selectedCategoryFromMenu: VehicleType|null = null;
 
   constructor() {
     this.categoriesData = categories;

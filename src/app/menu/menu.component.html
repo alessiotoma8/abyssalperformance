@@ -1,0 +1,72 @@
+<div>
+  <nav class="navbar navbar-dark">
+    <button
+      class="navbar-toggler p-0 border-0 openbtn"
+      type="button"
+      data-toggle="offcanvas"
+      (click)="openNav()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="titlenav">Abyssal Performance</a>
+
+    <img src="https://svgshare.com/i/11Kh.svg" style="width:60px" title="" />
+  </nav>
+  <div id="mySidepanel" class="sidepanel">
+    <a class="closebtn category" (click)="closeNav()">&times;</a>
+    <a
+      (click)="closeNav()"
+      class="category"
+      routerLink=""
+      routerLinkActive="active"
+      >Home</a
+    >
+    <a class="category" (click)="openProduct()">Prodotti</a>
+    <div class="subcategory" *ngIf="isOpenProduct">
+      <div *ngFor="let category of categories">
+        <a (click)="openCategory(category.type)">{{ category.type }} </a>
+        <div class="subcategory2" *ngIf="isOpenCategory(category.type)">
+          <div *ngIf="isVehicle(category)">
+            <div *ngFor="let brand of asVehicleCat(category).brands">
+              <a (click)="openBrand(brand.brandName)">{{ brand.brandName }}</a>
+              <div class="subcategory3" *ngIf="isOpenBrand(brand.brandName)">
+                <div *ngFor="let model of brand.models">
+                  <a
+                    routerLink="/products"
+                    (click)="closeNav(); openModel(model.modelName)"
+                  >
+                    {{ model.modelName }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a routerLink="/products" (click)="openAccessory(); closeNav()"
+        >Accessori</a
+      >
+      <a (click)="closeNav()" routerLink="/products" routerLinkActive="active"
+        >Tutti i prodotti</a
+      >
+      <a (click)="closeNav()" routerLink="custom">Su misura</a>
+    </div>
+    <a (click)="closeNav()" class="category" routerLink="/production"
+      >Produzione</a
+    >
+    <a
+      (click)="closeNav()"
+      class="category"
+      routerLink="/aboutus"
+      routerLinkActive="active"
+      >Chi siamo</a
+    >
+    <a
+      (click)="closeNav()"
+      class="category"
+      routerLink="/contact"
+      routerLinkActive="active"
+      >Contattaci</a
+    >
+  </div>
+</div>

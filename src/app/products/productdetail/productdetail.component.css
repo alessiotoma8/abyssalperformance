@@ -1,0 +1,60 @@
+.price {
+  text-align: right;
+  font-weight: bolder;
+}
+
+.surface {
+  width: 20px;
+}
+
+.finiture {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.btn-finiture {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.filteritem {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+#roundedButton {
+  width: 60px;
+}
+
+.dropdown-menu {
+  margin-top: 8px;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+}
+
+.filterIcon {
+  margin-right: 0px;
+  font-size: 25px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+div.scrollmenu {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu .item {
+  display: inline-block;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
