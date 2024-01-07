@@ -1,0 +1,31 @@
+.filteritem {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.dropdown-menu {
+  margin-top: 40px;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+}
+
+.filterIcon {
+  margin-right: 0px;
+  font-size: 25px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+div.scrollmenu {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu .item {
+  display: inline-block;
+}

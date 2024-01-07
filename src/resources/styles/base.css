@@ -1,0 +1,80 @@
+html {
+  background: var(--theme-background);
+  color: var(--theme-color);
+  transition: all ease-in-out 400ms;
+}
+
+.card{
+  background: var(--theme-background);
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.container{
+  padding-top: 8px;
+}
+
+.filtered::after {
+  content: '\00D7';
+  margin-left: 5px; 
+}
+
+
+
+.dropdown-menu{
+  display: fixed;
+  margin-top: 8px;
+  border-radius: 8px;
+  background-color: #606060;
+}
+.dropdown-menu a{
+  color: #C9C9C9;
+}
+.dropdown-menu a:hover{
+  background-color: transparent;
+  color: white;
+}
+
+
+
+#roundedButton.btn-secondary{
+  color: white;
+  background:#330E7D;
+}
+
+#roundedButton.btn-disabled{
+  opacity: 0.7;
+}
+
+#roundedButton.btn-primary{
+  color: white;
+  background: radial-gradient(circle, #6008C4, #330E7D);
+ 
+}
+
+#roundedButton{
+  background: var(--theme-background);
+  color: var(--theme-color);
+  border: 1px solid var(--theme-color);
+  padding: 0 8px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 25px;
+  margin-right: 8px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.fa{
+  color: var(--theme-color);
+}
+.fa:hover{
+  color: var(--theme-color);
+  opacity: 0.7;
+}

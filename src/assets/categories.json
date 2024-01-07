@@ -1,0 +1,49 @@
+{
+  "categories": [
+    {
+    "type": "Auto",
+    "brands": [
+      {
+        "brandName": "Bmw",
+        "models": [
+          {
+            "modelName": "Serie 4 (F32) 2013/2020"
+          }
+        ]
+      },
+      {
+        "brandName": "Mercedes",
+        "models": [
+          {
+            "modelName": "Cls 63 amg"
+          }
+        ]
+      }
+    ]
+    },
+    {
+      "type": "Moto",
+      "brands": [
+        {
+          "brandName": "Ktm",
+          "models": [
+            {
+              "modelName": "Ktm Exc 125 2023"
+            },
+            {
+              "modelName": "Ktm Exc 125 2015"
+            }
+          ]
+        },
+        {
+          "brandName": "Husquarna",
+          "models": [
+            {
+              "modelName": "Sm 125 2023"
+            }
+          ]
+        }
+      ]
+      }
+  ]
+}

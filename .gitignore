@@ -1,0 +1,15 @@
+node_modules/
+package-lock.json
+dist/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.env
+.env.prod
+.env.stage
+/src/environments/*.ts

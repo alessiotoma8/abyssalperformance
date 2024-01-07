@@ -1,0 +1,35 @@
+img {
+  border-radius: 25px;
+  width: 100%;
+  object-fit: cover;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-weight: 600;
+  text-align: center;
+}
+
+h4 {
+  padding-left: 8px;
+  margin-top: auto;
+}
+
+/* 
+ Beetween xs and xm change the order of the image
+ from 2 to 1 (bottom - left)
+ */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .custom-order {
+    order: 1; /* Your desired order for this breakpoint */
+  }
+}

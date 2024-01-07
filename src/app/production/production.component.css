@@ -1,0 +1,16 @@
+.finiture {
+  width: 100%;
+  aspect-ratio: 1.5/1;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+h2 {
+  font-weight: 600;
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}

@@ -1,0 +1,120 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+</head>
+
+<div class="container">
+  <div class="filteritem">
+    <!---row col-sm-12  -->
+    <div class="scrollmenu">
+      <div class="item">
+        <button
+          *ngIf="!selectedCategory"
+          class="dropdown-toggle"
+          id="roundedButton"
+          data-toggle="dropdown"
+        >
+          <span class="filterIcon material-symbols-outlined">category</span>
+          <span>Categoria</span>
+          <div class="dropdown-menu" aria-labelledby="roundedButton">
+            <div *ngFor="let category of categories">
+              <a
+                class="dropdown-item"
+                (click)="selectCategory(category.type)"
+                >{{ category.type }}</a
+              >
+            </div>
+          </div>
+        </button>
+        <button
+          *ngIf="selectedCategory"
+          (click)="deselectCategory()"
+          class="btn btn-secondary filtered"
+          id="roundedButton"
+        >
+          <span class="filterIcon material-symbols-outlined">category</span>
+          <span>{{ selectedCategory }}</span>
+        </button>
+      </div>
+      <div *ngIf="brands.size != 0" class="item">
+        <button
+          *ngIf="!selectedBrandName"
+          class="dropdown-toggle"
+          id="roundedButton"
+          data-toggle="dropdown"
+        >
+          <span class="filterIcon material-symbols-outlined">store</span>
+          <span>Brand</span>
+          <div class="dropdown-menu" aria-labelledby="roundedButton">
+            <div *ngFor="let brand of brands">
+              <a class="dropdown-item" (click)="selectBrand(brand.brandName)">{{
+                brand.brandName
+              }}</a>
+            </div>
+          </div>
+        </button>
+        <button
+          *ngIf="selectedBrandName"
+          (click)="deselectBrand()"
+          class="btn btn-secondary filtered"
+          id="roundedButton"
+        >
+          <span class="filterIcon material-symbols-outlined">store</span>
+          <span>{{ selectedBrandName }}</span>
+        </button>
+      </div>
+      <div *ngIf="models.size != 0" class="item">
+        <button
+          *ngIf="!selectedModelName"
+          class="dropdown-toggle"
+          id="roundedButton"
+          data-toggle="dropdown"
+        >
+          <span class="filterIcon material-symbols-outlined">package_2</span>
+          <span>Modello</span>
+          <div class="dropdown-menu" aria-labelledby="roundedButton">
+            <div *ngFor="let model of models">
+              <a class="dropdown-item" (click)="selectModel(model.modelName)">{{
+                model.modelName
+              }}</a>
+            </div>
+          </div>
+        </button>
+        <button
+          *ngIf="selectedModelName"
+          (click)="deselectModel()"
+          class="btn btn-secondary filtered"
+          id="roundedButton"
+        >
+          <span class="filterIcon material-symbols-outlined">package_2</span>
+          <span>{{ selectedModelName }}</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <ng-container
+        *ngIf="
+          selectedCategory || selectedBrandName || selectedModelName;
+          else noSelection
+        "
+      >
+        <h3>
+          {{ selectedCategory }} {{ selectedBrandName }} {{ selectedModelName }}
+        </h3>
+      </ng-container>
+      <ng-template #noSelection>
+        <h3>Tutti i prodotti</h3>
+      </ng-template>
+    </div>
+    <!---
+      <input class="form-control" id="myInput" type="text" [(ngModel)]="searchValue" (keyup)="filterTable()" placeholder="Cerca..">
+   --->
+    <div class="col-sm-12 col-md-4 col-xl-4">
+      <a>{{ filteredProductLists.length }} risultati disponibili</a>
+    </div>
+  </div>
+</div>
+
+<app-productlist [list]="filteredProductLists"></app-productlist>

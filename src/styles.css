@@ -1,0 +1,4 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import './resources/styles/theme/default.css';
+@import './resources/styles/theme/dark.css';
+@import './resources/styles/base.css';

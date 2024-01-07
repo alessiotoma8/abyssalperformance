@@ -1,0 +1,152 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+</head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <div
+        [id]="'carouselExampleIndicators_' + product.id"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            *ngFor="let url of product.imageUrls; let i = index"
+            [attr.data-target]="'#carouselExampleIndicators_' + product.id"
+            [attr.data-slide-to]="i"
+            [class.active]="i === 0"
+          ></li>
+        </ol>
+        <div class="carousel-inner">
+          <div
+            *ngFor="let url of product.imageUrls; let i = index"
+            class="carousel-item"
+            [class.active]="i === 0"
+          >
+            <img class="d-block w-100" [src]="url" alt="Slide {{ i }}" />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          [attr.href]="'#carouselExampleIndicators_' + product.id"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          [attr.href]="'#carouselExampleIndicators_' + product.id"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- do a style for the butrton in common same of dropdown-->
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.productName }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text price">{{ product.price }}€</p>
+
+          <div *ngIf="modelsAviableList.length != 0">
+            <h6>Modelli disponibili</h6>
+            <div class="row">
+              <div class="col-sm-12">
+                <button
+                  *ngIf="!selectedModel"
+                  class="dropdown-toggle"
+                  id="roundedButton"
+                  data-toggle="dropdown"
+                  style="width: auto;"
+                >
+                  <span>Modello</span>
+                  <div class="dropdown-menu" aria-labelledby="roundedButton">
+                    <div *ngFor="let model of modelsAviableList">
+                      <a class="dropdown-item" (click)="selectModel(model)">{{
+                        model.modelName
+                      }}</a>
+                    </div>
+                  </div>
+                </button>
+
+                <button
+                  *ngIf="selectedModel"
+                  (click)="deselectModel()"
+                  class="btn btn-secondary filtered"
+                  id="roundedButton"
+                  style="width:auto"
+                >
+                  <span class="filterIcon material-symbols-outlined"
+                    >package_2</span
+                  >
+                  <span>{{ selectedModel.modelName }}</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <h6>Finiture disponibili</h6>
+          <div class="row">
+            <div *ngFor="let finiture of finitureList">
+              <div class="col-sm-4">
+                <button
+                  [ngClass]="
+                    isSelectedFiniture(finiture) ? 'btn-secondary' : ''
+                  "
+                  (click)="selectFiniture(finiture)"
+                  id="roundedButton"
+                >
+                  <a>{{ finiture.title }}</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <button
+              routerLink="/contact"
+              (click)="addToCart()"
+              id="roundedButton"
+              [ngClass]="getEnabledCart() ? 'btn-primary' : 'btn-disabled'"
+              [disabled]="!getEnabledCart()"
+              style="width:100%"
+            >
+              <span class="material-symbols-outlined">shopping_cart</span>
+              Richiedi informazioni
+            </button>
+          </div>
+          <div *ngIf="selectedFiniture">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <h2>{{ selectedFiniture.title }}</h2>
+                <p>{{ selectedFiniture.desc }}</p>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <img class="finiture" src="{{ selectedFiniture.imgUrl }}" />
+              </div>
+            </div>
+            <button
+              routerLink="/production"
+              id="roundedButton"
+              class="btn-primary btn-finiture"
+              style="width:100%"
+            >
+              <a>Dettagli sulla finitura</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

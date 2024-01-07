@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Linea di produzione</h2>
+  <p>
+    La produzione artigianale di pezzi in fibra di carbonio per auto o moto
+    inizia con la <b>progettazione dettagliata</b> del componente desiderato.
+    Dopo la progettazione, i fogli di fibra di carbonio vengono attentamente
+    tagliati e stratificati in uno <b>stampo</b>. Gli artigiani applicano
+    manualmente la resina per saturare la fibra, garantendo <b>solidità</b>.
+    Dopo la polimerizzazione controllata, il pezzo viene rimosso dallo stampo e
+    lavorato ulteriormente per <b>rifinitura</b> e foratura. Questo processo
+    richiede competenze specializzate, offrendo una <b>qualità</b> unica e cura
+    manuale. Nonostante le tecnologie moderne, l'arte tradizionale persiste per
+    creare <b>pezzi distintivi</b>.
+  </p>
+
+  <h2>Le nostre finiture</h2>
+  <div class="row">
+    <div *ngFor="let finiture of finitureList" class="col-sm-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 order-md-1 order-2">
+              <img
+                class="finiture"
+                src="{{ finiture.imgUrl }}"
+                alt="{{ finiture.title }}"
+              />
+            </div>
+            <div class="col-md-8 order-md-2 order-1 mb-4">
+              <h3 class="card-title">{{ finiture.title }}</h3>
+              <p class="card-text">{{ finiture.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

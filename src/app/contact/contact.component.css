@@ -1,0 +1,60 @@
+.reqField {
+  margin-left: 2px;
+  color: RGB(203, 68, 74);
+}
+
+.loading {
+  margin: 0;
+  width: 90px;
+}
+
+.alert-success {
+  text-align: center;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+.alert {
+  position: fixed;
+  margin: 0;
+  bottom: -100px; /* Start off-screen */
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  border-radius: 0;
+}
+
+.alert-show {
+  bottom: 0;
+}
+
+@keyframes slideIn {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -100px;
+  }
+}
+
+/* Apply animations when the alert-show class is added or removed */
+.alert.slide-in {
+  animation: slideIn 0.5s ease-in-out;
+  animation-fill-mode: forwards; /* Keep the styles after the animation */
+}
+
+.alert.slide-out {
+  animation: slideOut 0.5s ease-in-out;
+  animation-fill-mode: forwards; /* Keep the styles after the animation */
+}
