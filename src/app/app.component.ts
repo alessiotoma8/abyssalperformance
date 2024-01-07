@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { ThemeService } from './Common/services/theme.service';
+import * as firebase from 'firebase/app'
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   darkThemeEnabled: boolean;
 
   constructor(private themeService: ThemeService) {
@@ -19,5 +21,9 @@ export class AppComponent {
     } else {
       this.themeService.theme = "";
     }
+  }
+
+  ngAfterViewInit(): void {
+   
   }
 }

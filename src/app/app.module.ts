@@ -22,6 +22,11 @@ import { ContactUsComponent } from './contact/contact.component';
 import { ProductionComponent } from './production/production.component';
 import { FinitureService } from './Common/services/finiture.service';
 import { ThemeService } from './Common/services/theme.service';
+import { getAnalytics } from "firebase/analytics";
+import { environment } from '../environments/environment.prod';
+import { initializeApp } from 'firebase/app';
+
+const app = initializeApp(environment.firebaseConfig);
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
