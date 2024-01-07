@@ -1,0 +1,98 @@
+{
+  "products": [
+    {
+      "productName": "COVER SERBATOIO SUPERIORE IN CARBONIO",
+      "imageUrls": [
+        "https://m.media-amazon.com/images/I/51wmFAL5AFL.jpg",
+        "https://www.picclickimg.com/SJ0AAOSwIzVktYKa/Adesivo-battitacco-in-fibra-di-carbonio-per-tutte.webp"
+      ],
+      "description" : "Cover serbatoio superiore realizzata in carbonio prepreg. per i modelli KTM EXC 125 2012 - 2013 - 2014 - 2015 - 2016 e lavorata tramite il processo di lavorazione in autoclave. Ma  L'utilizzo della cover è finalizzato alla protezione del serbatoio del vostro veicolo da quelli che potrebbero essere eventuali urti e/o collisioni esterne. Oltre ad avere un valore meramente utilitaristico, la Cover contribuisce a donare un look più accattivante al vostro mezzo.",
+      "price": 150,
+      "category": 
+        {
+        "type": "Moto",
+        "brands": [
+          {
+            "brandName": "Ktm",
+            "models": [
+              {
+                "modelName": "Ktm Exc 125 2023"
+              },
+              {
+                "modelName": "Ktm Exc 125 2015"
+              }
+            ]
+          },
+          {
+            "brandName": "Husquarna",
+            "models": [
+              {
+                "modelName": "Sm 125 2023"
+              }
+            ]
+          }
+        ]
+        }
+      
+    },
+    {
+      "productName": "Coprifaro superiore",
+      "imageUrls": [
+        "https://www.picclickimg.com/SJ0AAOSwIzVktYKa/Adesivo-battitacco-in-fibra-di-carbonio-per-tutte.webp"
+      ],
+      "description" : "Coprifaro superiore in pura fibra di carbonio, per esaltare sia l'aspetto che le prestazioni della propria auto.",
+      "price": 50,
+      "category": 
+        {
+        "type": "Auto",
+        "brands": [
+          {
+            "brandName": "Bmw",
+            "models": [
+              {
+                "modelName": "Serie 4 (F32) 2013/2020",
+                "constructorYears": 1
+              }
+            ]
+          }
+        ]
+        }
+    },
+    {
+      "productName": "Ali carene",
+      "imageUrls": [
+        "https://www.picclickimg.com/SJ0AAOSwIzVktYKa/Adesivo-battitacco-in-fibra-di-carbonio-per-tutte.webp"
+      ],
+      "description" : "Ali carene in pura fibra di carbonio, per esaltare sia l'aspetto che le prestazioni della propria auto",
+      "price": 123,
+      "category": 
+        {
+        "type": "Auto",
+        "brands": [
+          {
+            "brandName": "Mercedes",
+            "models": [
+              {
+                "modelName": "Cls 63 amg",
+                "constructorYears": 1
+              }
+            ]
+          }
+        ]
+        }
+    },
+    {
+      "productName": "Accessorio test",
+      "imageUrls": [
+        "https://www.picclickimg.com/SJ0AAOSwIzVktYKa/Adesivo-battitacco-in-fibra-di-carbonio-per-tutte.webp"
+      ],
+      "description" : "porcoddio",
+      "price": 123,
+      "category": 
+        {
+        "type": "Accessori",
+        "brands":[]
+        }
+    }
+  ]
+}
