@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ThemeService {
-  darkThemeEnabled: boolean=false;
+  darkThemeEnabled: boolean = false;
 
   set theme(name: string) {
     this.darkThemeEnabled = !this.darkThemeEnabled;
