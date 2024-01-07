@@ -18,6 +18,7 @@ import { FilterProducts } from './products/filter/filter.component';
 import { ProductDetail } from './products/productdetail/productdetail.component';
 import { AboutUsComponent } from './about/about-us.component';
 import { CustomComponent } from './custom/custom.component';
+import { ContactUsComponent } from './contact/contact.component';
 import { ProductionComponent } from './production/production.component';
 import { FinitureService } from './Common/services/finiture.service';
 import { ThemeService } from './Common/services/theme.service';
@@ -35,6 +36,7 @@ import { ThemeService } from './Common/services/theme.service';
     FilterProducts,
     ProductList,
     AboutUsComponent,
+    ContactUsComponent,
     ProductDetail,
     ProductionComponent,
     CustomComponent,

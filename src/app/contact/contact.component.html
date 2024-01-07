@@ -1,0 +1,98 @@
+<div
+  *ngIf="isSuccess"
+  [ngClass]="{
+    'alert alert-success': true,
+    'slide-in': isSuccess,
+    'slide-out': !isSuccess
+  }"
+  role="alert"
+>
+
+  <a>L'email è stata inviata con successo</a>
+  <br />
+  <a>Riceverai una risposta entro 48h</a>
+</div>
+
+<div
+  *ngIf="isError"
+  [ngClass]="{
+    'alert alert-danger': true,
+    'slide-in': isError,
+    'slide-out': !isError
+  }"
+  role="alert"
+>
+  <a>Si è verificato un'errore nell'invio dell' email</a>
+  <br />
+  <a>Contattaci all' indirizzo: abyssalperformance&#64;gmail.com</a>
+</div>
+
+
+<div class="container">
+  <h2 [style.textAlign]="titleAlignment">{{ title }}</h2>
+  <form [formGroup]="form" (ngSubmit)="sendEmail()">
+    <div class="mb-3 row">
+      <div class="col">
+        <label>Nome</label>
+        <input type="text" formControlName="Nome" class="form-control" />
+      </div>
+      <div class="col">
+        <label>Email</label>
+        <label class="reqField">*</label>
+        <input
+          type="email"
+          formControlName="Email"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.Email.errors }"
+        />
+        <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+          <div *ngIf="f.Email.errors.required">L'email è richiesta</div>
+          <div *ngIf="f.Email.errors.email">L'email non è valida</div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <div class="col">
+        <label>Prodotto</label>
+        <input type="text" formControlName="Product" class="form-control" />
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <div class="col">
+        <label>Modello</label>
+        <input type="text" formControlName="Model" class="form-control" />
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <div class="col">
+        <label>Message</label>
+        <label class="reqField">*</label>
+        <textarea
+          formControlName="Message"
+          class="form-control"
+          rows="5"
+          [ngClass]="{ 'is-invalid': submitted && f.Message.errors }"
+        ></textarea>
+        <div *ngIf="submitted && f.Message.errors" class="invalid-feedback">
+          <div *ngIf="f.Message.errors.required">Campo obbligatorio</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3 row justify-content-center">
+      <button
+        [disabled]="isLoading"
+        type="submit"
+        id="roundedButton"
+        class="btn-primary"
+      >
+        <div *ngIf="!isLoading">
+          <a>Invia</a>
+        </div>
+        <div *ngIf="isLoading">
+          <img class="loading" src="https://s13.gifyu.com/images/Sj15J.gif" />
+        </div>
+      </button>
+    </div>
+  </form>
+</div>

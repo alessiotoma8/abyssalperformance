@@ -98,8 +98,8 @@
 
           <h6>Finiture disponibili</h6>
           <div class="row">
-            <div *ngFor="let finiture of finitureList">
-              <div class="col-sm-4">
+            <div *ngFor="let finiture of finitureList" class="col-4">
+            
                 <button
                   [ngClass]="
                     isSelectedFiniture(finiture) ? 'btn-secondary' : ''
@@ -109,7 +109,7 @@
                 >
                   <a>{{ finiture.title }}</a>
                 </button>
-              </div>
+          
             </div>
           </div>
 
