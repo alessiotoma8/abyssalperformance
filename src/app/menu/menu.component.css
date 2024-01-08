@@ -13,7 +13,9 @@
 }
 
 .navbar {
-  background-color: #9f87af;
+  background-color: #707070;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -85,4 +87,8 @@
   100% {
     opacity: 1;
   }
+}
+
+.logo-center{
+  height: 60px; text-align: center;
 }
