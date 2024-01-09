@@ -22,6 +22,7 @@
     "@emailjs/browser": "^3.11.0",
     "@ng-bootstrap/ng-bootstrap": "^16.0.0-rc.2",
     "@popperjs/core": "^2.11.8",
+    "@types/jquery": "^3.5.29",
     "angular-new-router": "github:angular/router",
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.3",
