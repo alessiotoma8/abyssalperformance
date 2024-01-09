@@ -12,6 +12,11 @@
   text-align: center;
 }
 
+#roundedButton{
+ width: auto;
+ padding: 24px;
+}
+
 h2 {
   font-weight: 600;
 }
@@ -57,4 +62,16 @@ h2 {
 .alert.slide-out {
   animation: slideOut 0.5s ease-in-out;
   animation-fill-mode: forwards; /* Keep the styles after the animation */
+}
+
+@media(max-width:991px){
+  .content-desktop{
+    display:none
+  }
+}
+
+.content-desktop{
+  height: fit-content;
+  border-radius: 30px;
+  text-align: center;
 }
