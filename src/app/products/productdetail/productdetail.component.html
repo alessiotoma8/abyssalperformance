@@ -126,45 +126,52 @@
 
 
           <div *ngIf="selectedFiniture">
-            <div class="row">
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <h2>{{ selectedFiniture.title }}</h2>
-                <p>{{ selectedFiniture.desc }}</p>
-              </div>
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <img class="finiture" src="{{ selectedFiniture.imgUrl }}" />
-              </div>
+            <!-- perchè quello shifo di boostrap non a il data togle -->
+<!-- https://ng-bootstrap.github.io/#/home -->
+<!-- The second code snippet doesn't work because it is using Bootstrap's
+   native collapse functionality, 
+   which is not compatible with Angular. 
+   Bootstrap's native collapse functionality is designed to be 
+   used with vanilla HTML, not with Angular components.-->
+   
+            <div ngbAccordion>
+            <div ngbAccordionItem class="ngbAccordionItem">
+              <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="ngbAccordionButton">
+                Informazioni sulla finitura
+              </button>
+              </h2>
+              <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                  <ng-template>
+                    <div class="row">
+                      <div class="col-lg-6 col-md-12 col-sm-12">
+                        <h2>{{ selectedFiniture.title }}</h2>
+                        <p>{{ selectedFiniture.desc }}</p>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12">
+                        <img class="finiture" src="{{ selectedFiniture.imgUrl }}" />
+                      </div>
+                    </div>
+                    <button
+                      routerLink="/production"
+                      id="roundedButton"
+                      class="btn-primary btn-finiture"
+                      style="width:100%"
+                    >
+                      <a>Dettagli sulla finitura</a>
+                    </button>
+                  </ng-template>
+                </div>
             </div>
-            <button
-              routerLink="/production"
-              id="roundedButton"
-              class="btn-primary btn-finiture"
-              style="width:100%"
-            >
-              <a>Dettagli sulla finitura</a>
-            </button>
+          </div>
+          </div>
+
+
+            
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed" 
-      data-bs-toggle="collapse" 
-      data-bs-target="#flush-collapseOne" 
-      aria-expanded="false" 
-      aria-controls="flush-collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
     </div>
   </div>
 </div>

@@ -86,3 +86,22 @@ footer {
   color: var(--theme-color);
   opacity: 0.7;
 }
+
+
+.ngbAccordionItem{
+  background-color: var(--theme-background);
+  color: var(--theme-color);
+}
+
+.ngbAccordionHeader{
+  color: var(--theme-background);
+}
+
+.ngbAccordionButton{
+  /*background-color: var(--theme-background);
+  color: var(--theme-color);*/
+}
+
+.ngbAccordionButton::after{
+  /*color: var(--theme-color);*/
+}

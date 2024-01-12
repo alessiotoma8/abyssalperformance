@@ -26,11 +26,12 @@ import { getAnalytics } from "firebase/analytics";
 import { environment } from '../environments/environment.prod';
 import { initializeApp } from 'firebase/app';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const app = initializeApp(environment.firebaseConfig);
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule, NgbModule],
   declarations: [
     AppComponent,
     MenuComponent,
