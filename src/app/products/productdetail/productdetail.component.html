@@ -7,7 +7,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-6 carousel-product">
       <div
         [id]="'carouselExampleIndicators_' + product.id"
         class="carousel slide"
@@ -125,7 +125,7 @@
           </div>
 
 
-          <div *ngIf="selectedFiniture">
+          <div *ngIf="selectedFiniture" class="row">
             <!-- perchè quello shifo di boostrap non a il data togle -->
 <!-- https://ng-bootstrap.github.io/#/home -->
 <!-- The second code snippet doesn't work because it is using Bootstrap's
@@ -135,9 +135,9 @@
    used with vanilla HTML, not with Angular components.-->
    
             <div ngbAccordion>
-            <div ngbAccordionItem class="ngbAccordionItem">
+            <div ngbAccordionItem>
               <h2 ngbAccordionHeader>
-              <button ngbAccordionButton class="ngbAccordionButton">
+              <button ngbAccordionButton>
                 Informazioni sulla finitura
               </button>
               </h2>

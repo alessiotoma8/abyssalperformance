@@ -88,20 +88,16 @@ footer {
 }
 
 
-.ngbAccordionItem{
+.accordion-body{
   background-color: var(--theme-background);
   color: var(--theme-color);
 }
 
-.ngbAccordionHeader{
-  color: var(--theme-background);
+
+.accordion-header{
+  /*--bs-accordion-btn-color: var(--theme-color);
+  --bs-accordion-btn-bg: var(--theme-background);*/
 }
 
-.ngbAccordionButton{
-  /*background-color: var(--theme-background);
-  color: var(--theme-color);*/
-}
 
-.ngbAccordionButton::after{
-  /*color: var(--theme-color);*/
-}
+

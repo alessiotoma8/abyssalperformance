@@ -65,6 +65,12 @@ div.scrollmenu .item {
   justify-content: space-between;
 }
 
+
+.card{
+  aspect-ratio: 1;
+  min-width: 0;
+}
+
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
