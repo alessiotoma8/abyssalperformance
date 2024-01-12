@@ -1,56 +1,35 @@
 <head>
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-  />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <div class="container">
   <div class="row">
     <div class="col-sm-12 col-md-6 carousel-product">
-      <div
-        [id]="'carouselExampleIndicators_' + product.id"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
+      <div [id]="'carouselExampleIndicators_' + product.id" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
-          <button type="button" 
-            *ngFor="let url of product.imageUrls; let i = index"
-            [attr.data-bs-target]="'#carouselExampleIndicators_' + product.id"
-            [attr.data-bs-slide-to]="i"
-            [class.active]="i === 0"
-          ></button>
+          <button type="button" *ngFor="let url of product.imageUrls; let i = index"
+            [attr.data-bs-target]="'#carouselExampleIndicators_' + product.id" [attr.data-bs-slide-to]="i"
+            [class.active]="i === 0"></button>
         </ol>
         <div class="carousel-inner">
-          <div
-            *ngFor="let url of product.imageUrls; let i = index"
-            class="carousel-item"
-            [class.active]="i === 0"
-          >
+          <div *ngFor="let url of product.imageUrls; let i = index" class="carousel-item" [class.active]="i === 0">
             <img class="d-block w-100" [src]="url" alt="Slide {{ i }}" />
           </div>
         </div>
-        <a
-          class="carousel-control-prev"
-          [attr.href]="'#carouselExampleIndicators_' + product.id"
-          role="button"
-          data-bs-slide="prev"
-        >
+        <a class="carousel-control-prev" [attr.href]="'#carouselExampleIndicators_' + product.id" role="button"
+          data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a
-          class="carousel-control-next"
-          [attr.href]="'#carouselExampleIndicators_' + product.id"
-          role="button"
-          data-bs-slide="next"
-        >
+        <a class="carousel-control-next" [attr.href]="'#carouselExampleIndicators_' + product.id" role="button"
+          data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
       </div>
-      
-      <h4 class = "productName">{{ product.productName }}</h4>
+
+      <h4 class="productName">{{ product.productName }}</h4>
     </div>
 
     <!-- do a style for the butrton in common same of dropdown-->
@@ -64,33 +43,21 @@
             <h6>Modelli disponibili</h6>
             <div class="row">
               <div class="col-sm-12">
-                <button
-                  *ngIf="!selectedModel"
-                  class="dropdown-toggle"
-                  id="roundedButton"
-                  data-bs-toggle="dropdown"
-                  style="width: auto;"
-                >
+                <button *ngIf="!selectedModel" class="dropdown-toggle" id="roundedButton" data-bs-toggle="dropdown"
+                  style="width: auto;">
                   <span>Modello</span>
                   <div class="dropdown-menu" aria-labelledby="roundedButton">
                     <div *ngFor="let model of modelsAviableList">
                       <a class="dropdown-item" (click)="selectModel(model)">{{
                         model.modelName
-                      }}</a>
+                        }}</a>
                     </div>
                   </div>
                 </button>
 
-                <button
-                  *ngIf="selectedModel"
-                  (click)="deselectModel()"
-                  class="btn btn-secondary filtered"
-                  id="roundedButton"
-                  style="width:auto"
-                >
-                  <span class="filterIcon material-symbols-outlined"
-                    >package_2</span
-                  >
+                <button *ngIf="selectedModel" (click)="deselectModel()" class="btn btn-secondary filtered"
+                  id="roundedButton" style="width:auto">
+                  <span class="filterIcon material-symbols-outlined">package_2</span>
                   <span>{{ selectedModel.modelName }}</span>
                 </button>
               </div>
@@ -99,26 +66,18 @@
 
           <h6>Finiture disponibili</h6>
           <div class="finiture-container">
-          <div *ngFor="let finiture of finitureList">
-          <button
-            [ngClass]="isSelectedFiniture(finiture) ? 'btn-secondary' : ''"
-            (click)="selectFiniture(finiture)"
-            id="roundedButton"
-          >
-          <a>{{ finiture.title }}</a>
-        </button>
-        </div>
-        </div>
+            <div *ngFor="let finiture of finitureList">
+              <button [ngClass]="isSelectedFiniture(finiture) ? 'btn-secondary' : ''" (click)="selectFiniture(finiture)"
+                id="roundedButton">
+                <a>{{ finiture.title }}</a>
+              </button>
+            </div>
+          </div>
 
           <div class="row">
-            <button
-              routerLink="/contact"
-              (click)="addToCart()"
-              id="roundedButton"
-              [ngClass]="getEnabledCart() ? 'btn-primary' : 'btn-disabled'"
-              [disabled]="!getEnabledCart()"
-              style="width:100%"
-            >
+            <button routerLink="/contact" (click)="addToCart()" id="roundedButton"
+              [ngClass]="getEnabledCart() ? 'btn-primary' : 'btn-disabled'" [disabled]="!getEnabledCart()"
+              style="width:100%">
               <span class="material-symbols-outlined">shopping_cart</span>
               Richiedi informazioni
             </button>
@@ -127,54 +86,45 @@
 
           <div *ngIf="selectedFiniture" class="row">
             <!-- perchè quello shifo di boostrap non a il data togle -->
-<!-- https://ng-bootstrap.github.io/#/home -->
-<!-- The second code snippet doesn't work because it is using Bootstrap's
+            <!-- https://ng-bootstrap.github.io/#/home -->
+            <!-- The second code snippet doesn't work because it is using Bootstrap's
    native collapse functionality, 
    which is not compatible with Angular. 
    Bootstrap's native collapse functionality is designed to be 
    used with vanilla HTML, not with Angular components.-->
-   
+
             <div ngbAccordion>
-            <div ngbAccordionItem>
-              <h2 ngbAccordionHeader>
-              <button ngbAccordionButton>
-                Informazioni sulla finitura
-              </button>
-              </h2>
-              <div ngbAccordionCollapse>
-                <div ngbAccordionBody>
-                  <ng-template>
-                    <div class="row">
-                      <div class="col-lg-6 col-md-12 col-sm-12">
-                        <h2>{{ selectedFiniture.title }}</h2>
-                        <p>{{ selectedFiniture.desc }}</p>
+              <div ngbAccordionItem>
+                <h2 ngbAccordionHeader>
+                  <button ngbAccordionButton>
+                    Informazioni sulla finitura
+                  </button>
+                </h2>
+                <div ngbAccordionCollapse>
+                  <div ngbAccordionBody>
+                    <ng-template>
+                      <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                          <h2>{{ selectedFiniture.title }}</h2>
+                          <p>{{ selectedFiniture.desc }}</p>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                          <img class="finiture" src="{{ selectedFiniture.imgUrl }}" />
+                        </div>
                       </div>
-                      <div class="col-lg-6 col-md-12 col-sm-12">
-                        <img class="finiture" src="{{ selectedFiniture.imgUrl }}" />
-                      </div>
-                    </div>
-                    <button
-                      routerLink="/production"
-                      id="roundedButton"
-                      class="btn-primary btn-finiture"
-                      style="width:100%"
-                    >
-                      <a>Dettagli sulla finitura</a>
-                    </button>
-                  </ng-template>
+                      <button routerLink="/production" id="roundedButton" class="btn-primary btn-finiture"
+                        style="width:100%">
+                        <a>Dettagli sulla finitura</a>
+                      </button>
+                    </ng-template>
+                  </div>
                 </div>
+              </div>
             </div>
-          </div>
-          </div>
 
-
-            
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-

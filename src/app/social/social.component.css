@@ -1,4 +1,9 @@
+
+
 .iconsRow {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   justify-content: center;
 }
@@ -10,4 +15,59 @@
   font-size: 35px;
   text-align: center;
   text-decoration: none;
+}
+
+.item {
+  width: 50px;
+  border-radius: 50px;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: 0;
+  scale: 1 0;
+  transform-origin: bottom;
+  transition: scale 0.5s ease, background-color 0.5s ease;
+}
+
+.itemInstagram:hover::before {
+  scale: 1 1;
+  background: linear-gradient(to top, #ffce5c, #c92dfc);
+}
+
+.itemWhatsapp:hover::before {
+  scale: 1 1;
+  background-color: #45e675;
+}
+
+.itemMail:hover::before {
+  scale: 1 1;
+  background: radial-gradient(ellipse at center, #DB4437, #ffffff  200%);
+}
+
+.itemPhone:hover::before {
+  scale: 1 1;
+  background-color: #45e675;
+}
+
+.itemFacebook:hover::before {
+  scale: 1 1;
+  background-color: #316FF6;
+}
+
+.item .icon {
+  transition: 0.5s ease;
+  z-index: 2;
+}
+
+.item:hover .icon {
+  transform: rotateY(360deg);
 }
