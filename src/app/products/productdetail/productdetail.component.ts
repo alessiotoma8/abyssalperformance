@@ -16,6 +16,7 @@ import { Finiture } from '../../Common/finiture.model';
 import { Model } from '../../Common/model.model';
 import { Vehicle } from '../../Common/vehicle.model';
 import { Brand } from '../../Common/brand.model';
+import { Collapse } from 'bootstrap';
 
 @Component({
   selector: 'app-product-detail',
@@ -35,7 +36,7 @@ export class ProductDetail implements OnInit, OnDestroy {
   modelsAviableList: Model[] = [];
   selectedModel: Model|null = null;
   enabledCart: boolean = false;
-
+  
   constructor(
     private route: ActivatedRoute,
     private productsService: ProductsService,
