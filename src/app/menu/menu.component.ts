@@ -29,16 +29,6 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {}
   isOpenProduct = false;
 
-  openNav() {
-    document.getElementById('mySidepanel')!.style.width = 'auto';
-    document.getElementById('mySidepanel')!.style.paddingRight = '40px';
-  }
-  closeNav() {
-    document.getElementById('mySidepanel')!.style.width = '0px';
-    document.getElementById('mySidepanel')!.style.paddingRight = '0px';
-    this.closeAllOpenItems();
-  }
-
   openProduct() {
     this.isOpenProduct = !this.isOpenProduct;
     if (!this.isOpenProduct) {

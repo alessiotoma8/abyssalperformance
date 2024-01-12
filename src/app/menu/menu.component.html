@@ -3,12 +3,12 @@
 <div>
   <nav class="navbar navbar-dark">
     <div class="container-fluid">
-    <button
-      class="navbar-toggler p-0 border-0 openbtn"
-      type="button"
-      data-bs-toggle="offcanvas"
-      (click)="openNav()"
-    >
+ 
+    <button class="navbar-toggler p-0 border-0 openbtn" 
+    type="button" 
+    data-bs-toggle="offcanvas" 
+    data-bs-target="#offcanvasExample" 
+    aria-controls="offcanvasExample">
       <span class="navbar-toggler-icon"></span>
     </button>
     
@@ -17,11 +17,12 @@
   </div>
   </nav>
 
-  
-  <div id="mySidepanel" class="sidepanel">
-    <a class="closebtn category" (click)="closeNav()">&times;</a>
+ 
+
+  <div id="offcanvasExample" class="offcanvas offcanvas-start"  data-bs-backdrop="static" tabindex="-1">
+    <a class="closebtn category" data-bs-dismiss="offcanvas">&times;</a>
     <a
-      (click)="closeNav()"
+      data-bs-dismiss="offcanvas"
       class="category"
       routerLink=""
       routerLinkActive="active"
@@ -38,8 +39,9 @@
               <div class="subcategory3" *ngIf="isOpenBrand(brand.brandName)">
                 <div *ngFor="let model of brand.models">
                   <a
+                    data-bs-dismiss="offcanvas"
                     routerLink="/products"
-                    (click)="closeNav(); openModel(model.modelName)"
+                    (click)="openModel(model.modelName)"
                   >
                     {{ model.modelName }}
                   </a>
@@ -49,26 +51,26 @@
           </div>
         </div>
       </div>
-      <a routerLink="/products" (click)="openAccessory(); closeNav()"
+      <a routerLink="/products" (click)="openAccessory()" data-bs-dismiss="offcanvas"
         >Accessori</a
       >
-      <a (click)="closeNav()" routerLink="/products" routerLinkActive="active"
+      <a data-bs-dismiss="offcanvas" routerLink="/products" routerLinkActive="active"
         >Tutti i prodotti</a
       >
-      <a (click)="closeNav()" routerLink="custom">Su misura</a>
+      <a data-bs-dismiss="offcanvas" routerLink="custom">Su misura</a>
     </div>
-    <a (click)="closeNav()" class="category" routerLink="/production"
+    <a data-bs-dismiss="offcanvas" class="category" routerLink="/production"
       >Produzione</a
     >
     <a
-      (click)="closeNav()"
+      data-bs-dismiss="offcanvas"
       class="category"
       routerLink="/aboutus"
       routerLinkActive="active"
       >Chi siamo</a
     >
     <a
-      (click)="closeNav()"
+      data-bs-dismiss="offcanvas"
       class="category"
       routerLink="/contact"
       routerLinkActive="active"

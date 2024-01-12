@@ -25,6 +25,7 @@ import { ThemeService } from './Common/services/theme.service';
 import { getAnalytics } from "firebase/analytics";
 import { environment } from '../environments/environment.prod';
 import { initializeApp } from 'firebase/app';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const app = initializeApp(environment.firebaseConfig);
 
@@ -48,6 +49,7 @@ const app = initializeApp(environment.firebaseConfig);
   ],
   bootstrap: [AppComponent],
   providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
     CategoriesService,
     ThemeService,
     ProductsService,

@@ -1,10 +1,30 @@
 img {
-  height: 300px;
   border-radius: 30px;
   object-fit: cover;
+  height: 85vh;
 }
 
 .row {
   padding-top: 16px;
   padding-bottom: 16px;
 }
+
+.carousel{
+  width: 100%;
+}
+
+.go-shop-btn{
+  z-index: 255;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgba(0, 255, 255, 0.2); 
+}
+
+
+
