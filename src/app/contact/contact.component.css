@@ -65,25 +65,16 @@ h2 {
 }
 
 .card {
-  margin: 50px auto;
-  max-width: 700px;
-  background-size: cover;
-  backdrop-filter: blur(15px);
-  background-color: transparent;
-  background: rgba(255, 255, 255, 0.2);
-  z-index: 2;
-  position: relative; 
-  
+  max-width: 620px;
+  width: calc(100% - 20px); 
+  height: auto;
+  margin: 10px auto;
+  padding: 0 10px;
+  position: relative;
 }
 
-.bg-image {
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 1000px;
-  padding: 10px; 
-  box-sizing: border-box;
-  border-radius: 10px;
-}
+
+
+
+
+

@@ -37,6 +37,7 @@ export class ContactUsComponent implements OnDestroy {
       Product: ['', Validators.pattern('.*')],
       Model: ['', Validators.pattern('.*')],
       Message: ['', Validators.required],
+      Agree: [false, Validators.requiredTrue]
     });
     let productDesc = (
       cartService.selectedProduct?.productName ?? ''

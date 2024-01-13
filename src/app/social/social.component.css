@@ -48,10 +48,19 @@
   background-color: #45e675;
 }
 
+
 .itemMail:hover::before {
   scale: 1 1;
   background: radial-gradient(ellipse at center, #DB4437, #ffffff  200%);
 }
+
+
+
+@media (hover: none) {
+  .itemMail:hover::before { color: inherit; }
+}
+
+
 
 .itemPhone:hover::before {
   scale: 1 1;
