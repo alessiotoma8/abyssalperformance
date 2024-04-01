@@ -3,8 +3,8 @@
     {
       "productName": "COVER SERBATOIO SUPERIORE IN CARBONIO",
       "imageUrls": [
-        "https://m.media-amazon.com/images/I/51wmFAL5AFL.jpg",
-        "https://www.picclickimg.com/SJ0AAOSwIzVktYKa/Adesivo-battitacco-in-fibra-di-carbonio-per-tutte.webp"
+        "https://i.ibb.co/zQbG6qg/cover-serbatoio-superiore-in-carbonio-ktm-17-19-vmracing.jpg",
+        "https://i.ibb.co/7YQ3mzk/cover-superiore-serbatoio-carbonio-cmt-vmracing.jpg"
       ],
       "description" : "Cover serbatoio superiore realizzata in carbonio prepreg. per i modelli KTM EXC 125 2012 - 2013 - 2014 - 2015 - 2016 e lavorata tramite il processo di lavorazione in autoclave. Ma  L'utilizzo della cover è finalizzato alla protezione del serbatoio del vostro veicolo da quelli che potrebbero essere eventuali urti e/o collisioni esterne. Oltre ad avere un valore meramente utilitaristico, la Cover contribuisce a donare un look più accattivante al vostro mezzo.",
       "price": 150,
@@ -36,11 +36,36 @@
       
     },
     {
-      "productName": "Coprifaro superiore",
+      "productName": "PROTEZIONE FORCELLONE IN CARBONIO",
       "imageUrls": [
-        "https://www.picclickimg.com/SJ0AAOSwIzVktYKa/Adesivo-battitacco-in-fibra-di-carbonio-per-tutte.webp"
+        "https://i.ibb.co/tPHgFQ0/62ce9bd2564a5-CMT-Compositi-protezione-forcellone-in-carbonio.png",
+        "https://i.ibb.co/jr8CSKG/5fd081fbba059-CMT-Compositi-protezione-forcellone-in-carbonio.jpg"
       ],
-      "description" : "Coprifaro superiore in pura fibra di carbonio, per esaltare sia l'aspetto che le prestazioni della propria auto.",
+      "description" : "L'alta qualità  della protezione forcellone realizzata in carbonio prepreg. per i modelli KTM EXC 125 2017 - 2018 - 2019 è garantita dal processo di lavorazione adoperato dai nostri massimi esperti di settore.",
+      "price": 150,
+      "category": 
+        {
+        "type": "Moto",
+        "brands": [
+          {
+            "brandName": "Ktm",
+            "models": [
+              {
+                "modelName": "Ktm Exc 125 2015"
+              }
+            ]
+          }
+        ]
+        }
+      
+    },
+    {
+      "productName": "Spoiler posteriore carbonio per BMW",
+      "imageUrls": [
+        "https://i.ibb.co/vZZzct5/carbon-wing-3.jpg",
+        "https://i.ibb.co/v4gpXyR/carbon-wing-2.jpg"
+      ],
+      "description" : "Spoiler posteriore in carbonio con verniciatura trasparente per la protezione contro i raggi UV, per esaltare sia l'aspetto che le prestazioni della propria auto.",
       "price": 50,
       "category": 
         {
@@ -59,11 +84,13 @@
         }
     },
     {
-      "productName": "Ali carene",
+      "productName": "Diffusore posteriore in fibra di carbonio",
       "imageUrls": [
-        "https://www.picclickimg.com/SJ0AAOSwIzVktYKa/Adesivo-battitacco-in-fibra-di-carbonio-per-tutte.webp"
+        "https://i.ibb.co/hVCqyyn/s-l1600.jpg",
+        "https://i.ibb.co/fQKWkcD/s-l1600-1.jpg",
+        "https://i.ibb.co/fQKWkcD/s-l1600-1.jpg"
       ],
-      "description" : "Ali carene in pura fibra di carbonio, per esaltare sia l'aspetto che le prestazioni della propria auto",
+      "description" : "Per esaltare sia l'aspetto che le prestazioni della propria auto",
       "price": 123,
       "category": 
         {
@@ -82,12 +109,12 @@
         }
     },
     {
-      "productName": "Accessorio test",
+      "productName": "Portachiavi con fibra di carbonio",
       "imageUrls": [
-        "https://www.picclickimg.com/SJ0AAOSwIzVktYKa/Adesivo-battitacco-in-fibra-di-carbonio-per-tutte.webp"
+        "https://i.ibb.co/GcbWCND/47765781-a6ad-4a81-9280-a375290887dd-1800x1800.webp"
       ],
-      "description" : "aaa",
-      "price": 123,
+      "description" : "Portachiavi in pregiata fibra di carbonio con placatura d'argento, per essere sempre alla moda",
+      "price": 10,
       "category": 
         {
         "type": "Accessori",
