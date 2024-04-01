@@ -17,6 +17,9 @@ html {
   border-radius: 10px;
   font-family: 'Open Sans', sans-serif;
 }
+.card img{
+  border-radius: 10px;
+}
 
 footer {
   margin-top: auto;
