@@ -5,3 +5,6 @@
 It provides the user with basic information about the company, allowing them to view the products and send an email to request more information
 
 *[The application is still in development and will undergo changes] to still wrap back end*
+
+Hosted by firebase;
+Link for executing it: https://fir-abyssal.web.app/#/
