@@ -63,7 +63,7 @@ export class ContactUsComponent implements OnDestroy {
     }
     this.isLoading = true;
 
-    emailjs.init('l28jKOHBeJWjb47vE');
+    emailjs.init('key');
 
     const { Nome, Email, Product, Model, Message } = this.form.value;
 
